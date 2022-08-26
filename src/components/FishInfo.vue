@@ -35,6 +35,7 @@ const a = (e: MouseEvent) => {
   height: 100vh;
   width: 100vw;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 2;
 }
 
