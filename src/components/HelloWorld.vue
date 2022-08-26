@@ -1,21 +1,12 @@
 <script setup lang="ts">
-import { onBeforeMount, ref } from "vue";
+import { onBeforeMount, Ref, ref } from "vue";
 import makeRequest from "../utils/makeRequest";
 import { Hemisphere } from "../utils/enums";
 import FishInfo from "./FishInfo.vue";
-
-type Fish = {
-  image_url: string;
-  name: string;
-  catchphrases: string[];
-  shadow_size: string;
-  sell_nook: number;
-  sell_cj: number;
-  render_url: string;
-};
+import { Fish } from "../types";
 
 const loading = ref(true);
-const fishes = ref([]);
+const fishes: Ref<Fish[]> = ref([]);
 const selectedFish = ref(null);
 
 onBeforeMount(() => {

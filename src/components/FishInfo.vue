@@ -1,5 +1,13 @@
 <script setup lang="ts">
-const { fish, clearSelection } = defineProps(["fish", "clearSelection"]);
+import { Fish } from "../types";
+
+const {
+  fish,
+  clearSelection,
+}: Readonly<{ fish?: Fish; clearSelection?: () => void }> = defineProps([
+  "fish",
+  "clearSelection",
+]);
 const a = (e: MouseEvent) => {
   e.stopPropagation();
 };
