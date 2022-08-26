@@ -4,6 +4,16 @@ import makeRequest from "../utils/makeRequest";
 import { Hemisphere } from "../utils/enums";
 import FishInfo from "./FishInfo.vue";
 
+type Fish = {
+  image_url: string;
+  name: string;
+  catchphrases: string[];
+  shadow_size: string;
+  sell_nook: number;
+  sell_cj: number;
+  render_url: string;
+};
+
 const loading = ref(true);
 const fishes = ref([]);
 const selectedFish = ref(null);

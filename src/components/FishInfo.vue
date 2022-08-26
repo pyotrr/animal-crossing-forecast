@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { fish, clearSelection } = defineProps(["fish", "clearSelection"]);
-const a = (e: PointerEvent) => {
+const a = (e: MouseEvent) => {
   e.stopPropagation();
 };
 </script>
