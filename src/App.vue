@@ -18,4 +18,10 @@ p {
   text-shadow: 5px 3px #0ab3a2;
   line-height: 2.5rem;
 }
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+  }
+}
 </style>

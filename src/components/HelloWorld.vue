@@ -82,13 +82,15 @@ const clearSelection = () => {
 
 <style scoped>
 .fish-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  gap: 0.75rem;
   background-color: #fffae4;
   border-radius: 100px;
   padding: 3rem;
   justify-content: space-evenly;
+  width: 100%;
+  overflow: visible;
 }
 img {
   border-radius: 50%;
@@ -119,5 +121,19 @@ img {
 .fish:hover > img {
   background-color: #0ab3a2;
   transform: scale(1.15);
+}
+@media screen and (max-width: 800px) {
+  .fish-container {
+    width: 100%;
+    max-height: 90vh;
+    padding: 0.75rem;
+    grid-template-columns: repeat(auto-fill, 50px);
+    gap: 0.5rem;
+    border-radius: 25px;
+    overflow-y: auto;
+  }
+  .name {
+    display: none;
+  }
 }
 </style>

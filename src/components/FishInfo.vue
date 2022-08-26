@@ -11,8 +11,10 @@ const a = (e: PointerEvent) => {
       <h1>{{ fish.name }}</h1>
       <img :src="fish.render_url" alt="fish" height="100" />
       <p>{{ `"${fish.catchphrases[0]}"` }}</p>
+      <p>{{ `shadow: ${fish.shadow_size}` }}</p>
       <p>{{ `location: ${fish.location}` }}</p>
-      <p>{{ `price: ${fish.sell_nook}` }}</p>
+      <p>{{ `price: ${fish.sell_nook} bells` }}</p>
+      <p>{{ `(${fish.sell_cj} at CJ's)` }}</p>
     </div>
   </div>
 </template>
@@ -52,6 +54,8 @@ const a = (e: PointerEvent) => {
 .dialog img {
   max-height: 100px;
   margin-bottom: 1rem;
+  max-width: 60vw;
+  object-fit: contain;
 }
 
 .dialog p:first-of-type {
@@ -65,5 +69,11 @@ const a = (e: PointerEvent) => {
   color: #242424;
   font-size: 1.25rem;
   margin: 0 0 0.5rem 0;
+}
+@media screen and (max-width: 800px) {
+  .dialog {
+    min-width: 80vw;
+    max-width: 95vw;
+  }
 }
 </style>
