@@ -21,7 +21,7 @@ p {
 @media screen and (max-width: 800px) {
   p {
     font-size: 2rem;
-    margin: 0 0 1.5rem;
+    margin: 0.75rem 0 1.5rem;
   }
 }
 </style>

@@ -126,7 +126,7 @@ img {
 @media screen and (max-width: 800px) {
   .fish-container {
     width: 100%;
-    max-height: 90vh;
+    max-height: 85vh;
     padding: 0.75rem;
     grid-template-columns: repeat(auto-fill, 50px);
     gap: 0.5rem;
